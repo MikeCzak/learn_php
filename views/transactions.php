@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Transactions</title>
         <style>
@@ -24,6 +24,7 @@
         </style>
     </head>
     <body>
+        <h1 style="text-align: center">Transaction table</h1>
         <table>
             <thead>
                 <tr>
@@ -35,6 +36,13 @@
             </thead>
             <tbody>
                 <!-- YOUR CODE -->
+                <?php foreach ($clean_transactions as $line): ?>
+                <tr>
+                    <?php foreach ($line as $cell): ?>
+                        <td><?= "$cell"?></td>
+                    <?php endforeach;?>
+                </tr>
+                <?php endforeach;?>
             </tbody>
             <tfoot>
                 <tr>
